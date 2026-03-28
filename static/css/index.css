@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+/* ============================================================
+   BASE
+   ============================================================ */
+body {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Georgia', serif;
+}
+
+/* ============================================================
+   FOOTER ICONS
+   ============================================================ */
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+/* ============================================================
+   LINK BLOCKS (buttons)
+   ============================================================ */
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* ============================================================
+   PUBLICATION HEADER
+   ============================================================ */
+/* Override Bulma's sans-serif for all heading/title elements */
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif !important;
+}
+
+.publication-title {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-weight: bold;
+}
+
+.title-line1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+.title-line2 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.publication-authors {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-weight: normal;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+/* ============================================================
+   HERO / TEASER
+   ============================================================ */
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+/* ============================================================
+   CONTENT BOX
+   ============================================================ */
+.content-box {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    padding-top: 4.5rem;
+}
+
+/* ============================================================
+   SECTION TITLE TAG
+   ============================================================ */
+.section-title-tag {
+  display: inline-block;
+  background-color: #f8f8f8;
+  border: 5px solid white;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  position: relative;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.section-title-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    margin: 0;
+}
+
+/* ============================================================
+   INTRO QUOTE
+   ============================================================ */
+.intro-quote {
+    border-left: 5px solid #dbdbdb;
+    padding-left: 1.25em;
+    margin-left: 0;
+}
+.intro-quote p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #363636;
+    margin-bottom: 1.5em !important;
+}
+.intro-quote em {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ============================================================
+   LAYOUT HELPERS
+   ============================================================ */
+.top-aligned-columns.is-vcentered {
+    align-items: flex-start;
+}
+
+.columns.is-centered > .column.is-full-width,
+.columns.is-vcentered > .column.is-7 {
+    min-width: 0;
+}
+
+/* ============================================================
+   IMAGE CAPTIONS
+   ============================================================ */
+.image-caption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    font-family: 'Palatino Linotype', Palatino, Georgia, serif;
+    font-style: italic;
+}
+
+/* ============================================================
+   SCROLLABLE TABLES
+   ============================================================ */
+.scrollable-container {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.scrollable-container .table-wrapper,
+.scrollable-container .table-wrapper.is-horizontally-scrollable {
+  overflow-x: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.table-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-container .table-wrapper .table,
+.scrollable-container .table-wrapper.is-horizontally-scrollable .table {
+  table-layout: fixed !important;
+  width: auto !important;
+  margin-bottom: 0;
+  border-radius: 0;
+  font-family: 'Palatino Linotype', Palatino, Georgia, serif;
+  font-size: 0.92rem;
+}
+
+/* ============================================================
+   SCROLL ARROWS
+   ============================================================ */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0;
+    padding: 0;
+}
+
+.scroll-arrow:hover {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.scrollable-container:hover .scroll-arrow {
+    opacity: 1;
+}
+
+.scroll-arrow.is-disabled {
+    opacity: 0 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.scroll-left {
+    left: -1.25rem;
+}
+
+.scroll-right {
+    right: -1.25rem;
+}
+
+/* ============================================================
+   BIBTEX
+   ============================================================ */
+.bibtex-wrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.bibtex-wrapper pre {
+  background-color: #f8f8f8 !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow-x: auto !important;
+  padding-top: 3rem;
+  padding-right: 3rem;
+}
+
+.bibtex-wrapper pre code {
+  background-color: transparent !important;
+  padding: 0;
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 0.85rem;
+}
+
+.copy-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.1);
+  color: #363636;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.copy-button:hover {
+  background-color: rgba(0,0,0,0.15);
+}
+.copy-button.is-success {
+  background-color: #48c78e !important;
+  color: #fff !important;
+}
+
+/* ============================================================
+   SIDE NAVIGATION
+   ============================================================ */
+.side-navigation {
+  display: none;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+}
+
+@media (min-width: 1600px) {
+  .side-navigation {
+    display: block;
+  }
+}
+
+.side-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-navigation ul li {
+  margin-bottom: 0.5rem;
+}
+.side-navigation ul li:last-child {
+  margin-bottom: 0;
+}
+
+.side-navigation ul li a {
+  display: block;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-weight: normal;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.side-navigation ul li a:hover {
+  background-color: #e0e0e0;
+  color: #111;
+}
+
+.side-navigation ul li a.is-active {
+  background-color: #dbdbdb;
+  font-weight: bold;
+  color: #000;
+}
+
+/* ============================================================
+   INTERACTIVE PLOT CONTAINERS
+   ============================================================ */
+.plot-container {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Plotly injects its own <div class="plot-container plotly"> — reset it */
+.js-plotly-plot .plot-container.plotly {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+.js-plotly-plot rect.bg { fill: transparent !important; }
+.js-plotly-plot .bg { fill: transparent !important; }
+.js-plotly-plot svg { background: transparent !important; }
+.js-plotly-plot { background: transparent !important; }
+
+.plot-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.plot-tab {
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  border: 1.5px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.18s ease;
+}
+
+.plot-tab:hover {
+  background: #e0e0e0;
+  color: #222;
+}
+
+.plot-tab.active {
+  background: #3273dc;
+  border-color: #3273dc;
+  color: #fff;
+}
+
+/* KAS filter pills */
+.kas-filter-label {
+  font-size: 0.75rem;
+  color: #888;
+  font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  min-width: 3.5rem;
+  text-align: right;
+}
+.kas-method {
+  padding: 0.15rem 0.65rem;
+  border-radius: 12px;
+  border: 1px solid #bbb;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  color: #666;
+  transition: all 0.15s ease;
+}
+.kas-method:hover { background: #e4e4e4; color: #333; }
+.kas-method.active { background: #3273dc; border-color: #3273dc; color: #fff; }
+
+.plot-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #363636;
+  margin-bottom: 0.25rem;
+  font-family: 'Palatino Linotype', Palatino, Georgia, serif;
+  text-align: center;
+}
+
+/* ============================================================
+   TAKEAWAY BOX
+   ============================================================ */
+.takeaway-box {
+  background: linear-gradient(135deg, #f0f4ff 0%, #fafafa 100%);
+  border-left: 4px solid #3273dc;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.takeaway-box p {
+  margin: 0 !important;
+  font-size: 0.97rem;
+  color: #363636;
+}
+
+.takeaway-box strong {
+  color: #3273dc;
+}
+
+/* ============================================================
+   BENCHMARK INFO PANEL
+   ============================================================ */
+.bm-info {
+  font-size: 0.82rem;
+  color: #363636;
+  line-height: 1.45;
+}
+
+.bm-label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin: 0.7rem 0 0.2rem 0;
+}
+
+.bm-list {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+.bm-list li {
+  padding: 0.12rem 0 0.12rem 1em;
+  position: relative;
+}
+
+.bm-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #aaa;
+}
+
+.eval-tag {
+  display: inline-block;
+  padding: 0.05em 0.45em;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+
+.tag-probe { background: #e8f4fd; color: #1a6fa8; }
+.tag-inject { background: #fef3e2; color: #b45309; }
+
+/* ============================================================
+   SCENARIO BADGES
+   ============================================================ */
+.scenario-badge {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: 'Google Sans', Helvetica, sans-serif;
+  letter-spacing: 0.04em;
+}
+.badge-wiki { background: #e8f4fd; color: #1a6fa8; }
+.badge-code { background: #fef3e2; color: #b45309; }
+.badge-math { background: #f0fdf4; color: #166534; }
+
+/* ============================================================
+   METRIC DEFINITION CARDS
+   ============================================================ */
+.metric-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .metric-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metric-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.metric-card .metric-abbr {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #3273dc;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.metric-card .metric-name {
+  font-size: 0.82rem;
+  color: #555;
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+.metric-card .metric-desc {
+  font-size: 0.85rem;
+  color: #363636;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   PDF EMBED
+   ============================================================ */
+.pdf-figure {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  min-height: 300px;
+}
+
+/* ============================================================
+   FAILURE ANALYSIS SANKEY GRID
+   ============================================================ */
+.sankey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.15rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 900px) {
+  .sankey-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   BENCHMARK IMAGE CAROUSEL
+   ============================================================ */
+.bm-carousel {
+  margin-top: 0;
+}
+
+.bm-carousel-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.bm-carousel-tab {
+  padding: 0.25rem 0.9rem;
+  border-radius: 20px;
+  border: 1.5px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: 'Palatino Linotype', Palatino, Georgia, serif;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.15s ease;
+}
+
+.bm-carousel-tab:hover { background: #e0e0e0; color: #222; }
+
+.bm-carousel-tab.active {
+  background: #3273dc;
+  border-color: #3273dc;
+  color: #fff;
+}
+
+.bm-carousel-track {
+  position: relative;
+}
+
+.bm-carousel-img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.bm-carousel-img.active { display: block; }
+
+/* ============================================================
+   FIGURE WITH CAPTION
+   ============================================================ */
+.fig-with-caption {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.fig-with-caption img,
+.fig-with-caption object {
+  max-width: 100%;
+  border-radius: 8px;
+}
